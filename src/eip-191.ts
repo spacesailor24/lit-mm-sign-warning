@@ -81,7 +81,7 @@ export async function signEIP191() {
     console.log("🔄 Creating capacityDelegationAuthSig...");
     const { capacityDelegationAuthSig } =
       await litNodeClient.createCapacityDelegationAuthSig({
-        domain: "https://lit-mm-sign-warning-sdqd.vercel.app",
+        domain: "lit-mm-sign-warning-sdqd.vercel.app",
         dAppOwnerWallet: ethersSigner,
         capacityTokenId,
         delegateeAddresses: [address],
@@ -111,7 +111,7 @@ export async function signEIP191() {
       }) => {
         console.log("URI", uri);
         const toSign = await createSiweMessageWithRecaps({
-          domain: "https://lit-mm-sign-warning-sdqd.vercel.app",
+          domain: "lit-mm-sign-warning-sdqd.vercel.app",
           uri: uri!,
           expiration: expiration!,
           resources: resourceAbilityRequests!,
