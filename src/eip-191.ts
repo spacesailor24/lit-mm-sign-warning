@@ -108,8 +108,10 @@ export async function signEIP191() {
         expiration,
         uri,
       }) => {
+        console.log("URI", uri);
         const toSign = await createSiweMessageWithRecaps({
           domain: "https://lit-mm-sign-warning-sdqd.vercel.app",
+          statement: "Foobar",
           uri: uri!,
           expiration: expiration!,
           resources: resourceAbilityRequests!,
